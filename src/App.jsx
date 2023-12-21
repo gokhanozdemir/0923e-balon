@@ -32,11 +32,18 @@ function App() {
 
   return (
     <main className=''>
+      <div className='bg-blue-300 sm:bg-slate-500'>haci naber
+        <div className="hidden sm:block">ceeee</div>
+      </div>
       <header className='bg-slate-300 '>
         <nav>
-          <ul>
-            <li><a href="#">Home</a></li>
-            <li><a href="#">About</a></li>
+          <ul className='flex gap-3 flex-col items-center sm:flex-row'>
+            <li ><a href="#">Home</a></li>
+            <li className='bg-gray-700 order-first sm:order-none'><a href="#">About</a></li>
+
+            <li><a href="#">Contact</a></li>
+            <li ><a href="#">Contact 2</a></li>
+
           </ul>
         </nav>
       </header>
@@ -62,7 +69,7 @@ function App() {
 
       <div className="container bg-stone-300 " >
         <h2>Product Listing</h2>
-        <div className='container-fluid bg-orange-500 flex-wrap gap-y-7 justify-center md:justify-between'>
+        <div className='container-fluid bg-orange-500 flex-wrap gap-y-7 md:justify-between'>
           {products.map((product, i) => (
             <div className='max-w-xs md:max-w-60' key={product.id}>
               <img src={`https://picsum.photos/40${i}`} alt="Random Image" />
